@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg-color: #5f5f5f;
+  --firstBg-color: #fff;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Arial", sans-serif;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: var(--firstBg-color);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px -7px 45px 10px rgba(254, 254, 247, 1);
+  -moz-box-shadow: 0px -7px 45px 10px rgba(254, 254, 247, 1);
+  box-shadow: 0px -7px 45px 10px rgba(254, 254, 247, 1);
+}
+.title {
+  text-align: center;
+  font-style: italic;
+}
+.input_text {
+  width: calc(100% - 22px);
+  padding-block: 10px;
+  padding-left: 15px;
+  border-radius: 3px;
+}
+.add_button {
+  padding: 10px 20px;
+  margin-block: 10px;
+  background-color: rgb(3, 184, 3);
+  border-color: rgb(3, 184, 3);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.add_button:hover,
+.add_button:focus,
+.add_button:active {
+  background-color: rgb(31, 202, 31);
+  border-color: rgb(31, 202, 31);
+}
+.todo_list {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  background-color: rgb(42, 133, 133);
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+}
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+.delete_btn {
+  background-color: rgb(250, 46, 46);
+  border-color: rgb(250, 46, 46);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.delete_btn:hover,
+.delete_btn:focus,
+.delete_btn:active {
+  background-color: rgb(195, 22, 22);
+  border-color: rgb(195, 22, 22);
+}
