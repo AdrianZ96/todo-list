@@ -30,7 +30,7 @@ document.querySelector(".todo_list").addEventListener("click", (event) => {
     event.target.classList.toggle("completed");
   }
 });
-
+const alarmSound = document.querySelector("#alarm_sound");
 const minutesInput = document.querySelector("#minutes");
 console.log(minutesInput);
 const secondsInput = document.querySelector("#seconds");
@@ -56,6 +56,9 @@ const startCountdown = (totalSeconds) => {
       clearInterval(countdownInterval);
       countdownInterval.textContent = "Time is Up!";
     } else {
+      if (remainingSeconds === 47) {
+        alarmSound.play();
+      }
       remainingSeconds--;
 
       const minutes = Math.floor(remainingSeconds / 60);
