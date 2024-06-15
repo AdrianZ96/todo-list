@@ -79,3 +79,31 @@ ul li {
   background-color: rgb(195, 22, 22);
   border-color: rgb(195, 22, 22);
 }
+.timer {
+  background-color: #999;
+  border-radius: 7px;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.count_bar {
+  padding: 5px 10px;
+  width: calc(100% - 35px);
+  margin-bottom: 10px;
+}
+.count_btn {
+  background-color: rgb(3, 184, 3);
+  color: #fff;
+  border: solid rgb(3, 184, 3);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+}
+.count_btn:hover,
+.count_btn:focus,
+.count_btn:active {
+  background-color: rgb(31, 202, 31);
+  border-color: rgb(31, 202, 31);
+}

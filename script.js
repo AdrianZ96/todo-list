@@ -30,3 +30,40 @@ document.querySelector(".todo_list").addEventListener("click", (event) => {
     event.target.classList.toggle("completed");
   }
 });
+
+const minutesInput = document.querySelector("#minutes");
+console.log(minutesInput);
+const secondsInput = document.querySelector("#seconds");
+console.log(secondsInput);
+const startTimerBtn = document.querySelector(".count_btn");
+console.log(startTimerBtn);
+const countdownDisplay = document.querySelector("#countdown_display");
+console.log(countdownDisplay);
+
+startTimerBtn.addEventListener("click", () => {
+  const minutes = parseInt(minutesInput.value);
+  const seconds = parseInt(secondsInput.value);
+  const totalSeconds = minutes * 60 + seconds;
+
+  startCountdown(totalSeconds);
+});
+
+const startCountdown = (totalSeconds) => {
+  let remainingSeconds = totalSeconds;
+
+  const countdownInterval = setInterval(() => {
+    if (remainingSeconds <= 0) {
+      clearInterval(countdownInterval);
+      countdownInterval.textContent = "Time is Up!";
+    } else {
+      remainingSeconds--;
+
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = remainingSeconds % 60;
+
+      countdownDisplay.textContent = `${minutes}:${
+        seconds < 10 ? "0" : ""
+      }${seconds}`;
+    }
+  }, 1000);
+};
